@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block title %}{{data['title']}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-sm-3"></div><!-- /.col -->
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark"> Heart Disease Detection </h1>
+        </div><!-- /.col -->
+        <div class="col-sm-3"></div><!-- /.col -->
+      </div><!-- /.row -->
+      <br>
+      <br>
+    <div class="row">
+    
+      <!-- /.col-md-6 -->
+      <div class="col-md-4 col-lg-6">
+        <div class="card card-primary">
+            <!-- form start -->
+            <form role="form">
+              <div class="card-body">
+                  <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <label>Age</label>
+                          <input type="number" class="form-control" id="age" placeholder="age" name="age">
+                        </div>
+                        <div class="col-6">
+                          <label>Sex</label>
+                          <input type="number" class="form-control" id="sex" placeholder="sex" name="sex">
+                        </div>
+                        <div class="col-6">
+                            <label>Cp</label>
+                            <input type="number" class="form-control" id="cp" placeholder="cp" name="cp">
+                          </div>
+                          <div class="col-6">
+                            <label>Trestbps</label>
+                            <input type="number" class="form-control" id="trestbps" placeholder="trestbps" name="trestbps">
+                          </div>
+                          <div class="col-6">
+                              <label>Chol</label>
+                              <input type="number" class="form-control" id="chol" placeholder="chol" name="chol">
+                            </div>
+                            <div class="col-6">
+                              <label>Fbs</label>
+                              <input type="number" class="form-control" id="fbs" placeholder="fbs" name="fbs">
+                            </div>
+                            <div class="col-6">
+                                <label>Restecg</label>
+                                <input type="number" class="form-control" id="restecg" placeholder="restecg" name="restecg">
+                              </div>
+                              <div class="col-6">
+                                <label>Thalach</label>
+                                <input type="number" class="form-control" id="thalach" placeholder="thalach" name="thalach">
+                              </div>
+                              <div class="col-6">
+                                  <label>Exang</label>
+                                  <input type="number" class="form-control" id="exang" placeholder="exang" name="exang">
+                                </div>
+                                <div class="col-6">
+                                  <label>Oldpeak</label>
+                                  <input type="number" class="form-control" id="oldpeak" placeholder="oldpeak" name="oldpeak">
+                                </div>
+                                <div class="col-6">
+                                    <label>Slope</label>
+                                    <input type="number" class="form-control" id="slope" placeholder="slope" name="slope">
+                                  </div>
+                                  <div class="col-6">
+                                    <label>Ca</label>
+                                    <input type="number" class="form-control" id="ca" placeholder="ca" name="ca">
+                                  </div>
+                                  <div class="col-6">
+                                      <label>Thal</label>
+                                      <input type="number" class="form-control" id="thal" placeholder="thal" name="thal">
+                                    </div>
+                      </div>
+                    </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    
+      <div class="col-md-4 col-lg-6 ">
+        <div class="info-box bg-success">
+            <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+            <span class="info-box-text">You are Safe</span>
+            <!-- /.info-box-content -->
+          </div>
+          <div class="info-box bg-danger">
+              <span class="info-box-icon"><i class="far fa-thumbs-down"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">You are not Safe</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+
+        <!-- /.info-box -->
+      </div>
+      <!-- /.col-md-6 -->
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->
+{% endblock %}
+{% block foter %}{% endblock %}
