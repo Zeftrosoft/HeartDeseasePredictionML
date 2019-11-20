@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}{{data['title']}}{% endblock %}
-
 {% block content %}
 <div class="container">
+  <br><br><br>
     <div class="row mb-2">
         <div class="col-sm-3"></div><!-- /.col -->
         <div class="col-sm-6">
@@ -13,95 +13,125 @@
       <br>
       <br>
     <div class="row">
-    
       <!-- /.col-md-6 -->
       <div class="col-md-4 col-lg-6">
         <div class="card card-primary">
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="{{url_for('userdata')}}" method="POST">
               <div class="card-body">
                   <div class="card-body">
+                    <input type="hidden" value="{{data['userId']}}" name="userId">
                       <div class="row">
                         <div class="col-6">
                           <label>Age</label>
-                          <input type="number" class="form-control" id="age" placeholder="age" name="age">
+                          <input type="number" class="form-control" id="age" placeholder="age" name="age" required value='{{data["data"][0]}}'>
                         </div>
                         <div class="col-6">
                           <label>Sex</label>
-                          <input type="number" class="form-control" id="sex" placeholder="sex" name="sex">
+                          <input type="number" class="form-control" id="sex" placeholder="sex" name="sex" required value='{{data["data"][1]}}'>
                         </div>
+                      </div>
+                      <br>
+                      <div class="row">
                         <div class="col-6">
                             <label>Cp</label>
-                            <input type="number" class="form-control" id="cp" placeholder="cp" name="cp">
+                            <input type="number" class="form-control" id="cp" placeholder="cp" name="cp" required value='{{data["data"][2]}}'>
                           </div>
                           <div class="col-6">
                             <label>Trestbps</label>
-                            <input type="number" class="form-control" id="trestbps" placeholder="trestbps" name="trestbps">
+                            <input type="number" class="form-control" id="trestbps" placeholder="trestbps" name="trestbps" required value='{{data["data"][3]}}'>
                           </div>
+                      </div>
+                      <br>
+                      <div class="row">
                           <div class="col-6">
                               <label>Chol</label>
-                              <input type="number" class="form-control" id="chol" placeholder="chol" name="chol">
+                              <input type="number" class="form-control" id="chol" placeholder="chol" name="chol" required value='{{data["data"][4]}}'>
                             </div>
                             <div class="col-6">
                               <label>Fbs</label>
-                              <input type="number" class="form-control" id="fbs" placeholder="fbs" name="fbs">
+                              <input type="number" class="form-control" id="fbs" placeholder="fbs" name="fbs" required value='{{data["data"][5]}}'>
                             </div>
+                      </div>
+                      <br>
+                      <div class="row">
                             <div class="col-6">
                                 <label>Restecg</label>
-                                <input type="number" class="form-control" id="restecg" placeholder="restecg" name="restecg">
+                                <input type="number" class="form-control" id="restecg" placeholder="restecg" name="restecg" required value='{{data["data"][6]}}'>
                               </div>
                               <div class="col-6">
                                 <label>Thalach</label>
-                                <input type="number" class="form-control" id="thalach" placeholder="thalach" name="thalach">
+                                <input type="number" class="form-control" id="thalach" placeholder="thalach" name="thalach" required value='{{data["data"][7]}}'>
                               </div>
+                      </div>
+                      <br>
+                      <div class="row">
                               <div class="col-6">
                                   <label>Exang</label>
-                                  <input type="number" class="form-control" id="exang" placeholder="exang" name="exang">
+                                  <input type="number" class="form-control" id="exang" placeholder="exang" name="exang" required value='{{data["data"][8]}}'>
                                 </div>
                                 <div class="col-6">
                                   <label>Oldpeak</label>
-                                  <input type="number" class="form-control" id="oldpeak" placeholder="oldpeak" name="oldpeak">
+                                  <input type="number" class="form-control" id="oldpeak" placeholder="oldpeak" name="oldpeak" required value='{{data["data"][9]}}'>
                                 </div>
+                      </div>
+                      <br>
+                      <div class="row">
                                 <div class="col-6">
                                     <label>Slope</label>
-                                    <input type="number" class="form-control" id="slope" placeholder="slope" name="slope">
+                                    <input type="number" class="form-control" id="slope" placeholder="slope" name="slope" required value='{{data["data"][10]}}'>
                                   </div>
                                   <div class="col-6">
                                     <label>Ca</label>
-                                    <input type="number" class="form-control" id="ca" placeholder="ca" name="ca">
+                                    <input type="number" class="form-control" id="ca" placeholder="ca" name="ca" required value='{{data["data"][11]}}'>
                                   </div>
+                      </div>
+                      <br>
+                      <div class="row">
                                   <div class="col-6">
                                       <label>Thal</label>
-                                      <input type="number" class="form-control" id="thal" placeholder="thal" name="thal">
+                                      <input type="number" class="form-control" id="thal" placeholder="thal" name="thal" required value='{{data["data"][12]}}'>
                                     </div>
+                                    <div class="col-6"></div>
                       </div>
                     </div>
               </div>
               <!-- /.card-body -->
 
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="card-footer" style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-block">Save</button>
               </div>
             </form>
           </div>
       </div>
-    
-      <div class="col-md-4 col-lg-6 ">
-        <div class="info-box bg-success">
-            <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
-            <span class="info-box-text">You are Safe</span>
-            <!-- /.info-box-content -->
-          </div>
-          <div class="info-box bg-danger">
-              <span class="info-box-icon"><i class="far fa-thumbs-down"></i></span>
-              <div class="info-box-content">
-                <span class="info-box-text">You are not Safe</span>
-              </div>
+      {% if data['status']%}
+        <div class="col-md-4 col-lg-6 ">
+            {% if data['prediction'] == 0 %}
+            <div class="info-box bg-success">
+              <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
+              <span style="font-size: 25px;" class="info-box-text">According To My Prediction, You are Safe</span>
               <!-- /.info-box-content -->
             </div>
-
-        <!-- /.info-box -->
+            {% endif %}
+            {% if data['prediction'] == 1 %}
+            <div class="info-box bg-danger">
+                <span class="info-box-icon"><i class="far fa-thumbs-down"></i></span>
+                <div class="info-box-content">
+                  <span style="font-size: 25px;" class="info-box-text">According To My Prediction, You are not Safe</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            {% endif %}
+          <!-- /.info-box -->
+        </div>
+      {% endif %}
+      {% if not data['status']%}
+      <div class="col-md-4 col-md-6" >
+        <div class="alert alert-warning">
+          <h3>Please Fill The Form To Get Prediction!</h3>
+        </div>
       </div>
+      {% endif %}
       <!-- /.col-md-6 -->
     </div>
     <!-- /.row -->
