@@ -15,22 +15,7 @@ def justdashboard():
 def dashboard(userId):
     inti_res = {
         'status': False,
-        'data' : {
-            'age' : 0,
-            'sex' : 0,
-            'cp' : 0,
-            'trestbps' : 0,
-            'tbps': 0,
-            'chol' : 0,
-            'fbs' : 0,
-            'restecg' : 0,
-            'thalach' : 0,
-            'exang' : 0,
-            'oldpeak' : 0,
-            'slope' : 0,
-            'ca' : 0,
-            'thal' : 0
-        },
+        'data' : (0,0,0,0,0,0,0,0,0,0,0,0,0,0),
         'title': 'Dashboard',
         'userId': userId,
         'prediction' : -1
