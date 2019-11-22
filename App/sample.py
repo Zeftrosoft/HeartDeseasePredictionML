@@ -16,6 +16,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.33, rand
 knn_classifier = KNeighborsClassifier(n_neighbors = 8)
 knn_classifier.fit(X, y)
 score = knn_classifier.score(X_test, y_test)
+
 v = (70,1,0,145,174,0,1,125,1,2.6,0,0,3)
 user_df = np.array(v).reshape(1,13)
 print(user_df)
